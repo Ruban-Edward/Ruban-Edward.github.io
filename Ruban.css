@@ -96,8 +96,7 @@ section .title::after{
     align-items: center;
     justify-content: space-between;
 }
-.navbar .max-width .logo img{
-}
+
 .navbar .logo a span{
     color: #f9004d;
     transition: all 0.3s ease;
