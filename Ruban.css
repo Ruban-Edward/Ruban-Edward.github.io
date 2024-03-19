@@ -584,7 +584,7 @@ a:hover{
 }
 /* contact section styling */
 .contact{
-    background-color: #555;
+    background-color: #222;
     padding: 50px;
 }
 .contact-text h2{
@@ -600,7 +600,7 @@ a:hover{
 }
 .contact .contact-content .text{
     font-size: 30px;
-    color: aqua;
+    color: #f9004d;
     font-weight: 600;
     margin-bottom: 10px;
 }
@@ -662,8 +662,8 @@ a:hover{
   font-size: 18px;
   font-weight:bold;
   border-radius: 6px;
-  background:aqua;
-  border: 2px solid aqua;
+  background:#f9004d;
+  border: 2px solid #f9004d;
   transition: all 0.3s ease;
 }
 .right form .button-area button:hover{
