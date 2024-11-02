@@ -219,3 +219,11 @@ document.addEventListener('DOMContentLoaded', function() {
     const engineerResult = calculateDuration(engineerStart, engineerEnd);
     document.getElementById("presentDuration").innerText = engineerResult;
 });
+
+document.querySelector('.carousel').addEventListener('mouseenter', function() {
+    document.querySelector('.carousel-track').style.animationPlayState = 'paused';
+});
+
+document.querySelector('.carousel').addEventListener('mouseleave', function() {
+    document.querySelector('.carousel-track').style.animationPlayState = 'running';
+});

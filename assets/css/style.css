@@ -620,6 +620,90 @@ main {
     line-height: 1.6;
 }
 
+/*
+* framework 
+ */
+.frameworks {
+    margin-bottom: 30px;
+}
+
+.frameworks-title {
+    margin-bottom: 20px;
+}
+
+/* Carousel Container */
+.carousel {
+    overflow: hidden;
+    width: 100%;
+    margin: 0 10px;
+    position: relative;
+}
+
+.carousel-track {
+    display: flex;
+    padding: 10px 0;
+    animation: scroll 10s linear infinite;
+}
+
+.carousel-item {
+    width: 125px;
+    padding: 20px 30px;
+    display: flex;
+    margin: 0 20px;
+    transition: transform 0.3s ease;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    position: relative;
+    background: var(--border-gradient-onyx);
+    border-radius: 14px;
+    box-shadow: var(--shadow-2);
+    cursor: pointer;
+    z-index: 1;
+}
+
+.carousel-item::before {
+    content: "";
+    position: absolute;
+    inset: 1px;
+    background: var(--bg-gradient-jet);
+    border-radius: inherit;
+    z-index: -1;
+}
+
+.carousel-img {
+    width: 50px;
+}
+
+.carousel-img img {
+    width: 100%;
+}
+
+.carousel-text {
+    color: var(--orange-yellow-crayola);
+    margin-top: 10px;
+    font-weight: 600;
+}
+
+/* Scale and Pop-up on Hover */
+.carousel-item:hover {
+    transform: scale(1.1);
+}
+
+.carousel:hover .carousel-track {
+    animation-play-state: paused;
+}
+
+/* Carousel Animation */
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+}
 
 /**
  * #testimonials 
