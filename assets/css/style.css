@@ -579,6 +579,7 @@ time {
     overflow-x: auto;
     padding: 15px 0 0;
     scroll-snap-type: x mandatory;
+    background: var(--eerie-black-2);
 }
 
 .testimonials-item {
@@ -741,6 +742,7 @@ time {
     overflow: hidden;
     position: relative;
     padding: 10px 0;
+    background: var(--eerie-black-2);
 }
 
 .carousel-track {
@@ -1035,6 +1037,17 @@ textarea.form-input {
   #RESPONSIVE MEDIA QUERIES
 \*-----------------------------------*/
 
+@media (min-width: 320px) {
+    main {
+        margin: 25px;
+        margin-bottom: 70px;
+    }
+
+    .sidebar {
+        max-height: 125px;
+    }
+}
+
 @media (min-width: 580px) {
     :root {
         --fs-1: 32px;
@@ -1050,7 +1063,6 @@ textarea.form-input {
         margin-inline: auto;
     }
 
-    .sidebar,
     article {
         padding: 30px;
     }
