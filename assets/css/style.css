@@ -268,6 +268,7 @@ article.active {
 .avatar-box img {
     display: block;
     border-radius: 15px;
+    width: 120px;
 }
 
 .info-content .name {
@@ -286,6 +287,7 @@ article.active {
     margin-top: 5px;
     width: max-content;
     text-transform: uppercase;
+    justify-self: center;
 }
 
 .info_more-btn {
@@ -1043,6 +1045,11 @@ textarea.form-input {
         margin-bottom: 70px;
     }
 
+    .avatar-box img {
+        width: 80px;
+    }
+
+
     .sidebar {
         max-height: 125px;
     }
@@ -1062,6 +1069,11 @@ textarea.form-input {
         max-width: 540px;
         margin-inline: auto;
     }
+
+    .avatar-box img {
+        width: 80px;
+    }
+
 
     article {
         padding: 30px;
@@ -1089,6 +1101,11 @@ textarea.form-input {
         max-width: 720px;
     }
 
+    .avatar-box img {
+        width: 80px;
+    }
+
+
     .contacts-list {
         grid-template-columns: 1fr 1fr;
         gap: 20px;
@@ -1110,7 +1127,11 @@ textarea.form-input {
 
 @media (min-width: 1024px) {
     main {
-        max-width: 980px;
+        max-width: 80%;
+    }
+
+    .avatar-box img {
+        width: 80px;
     }
 
     .navbar {
@@ -1145,11 +1166,16 @@ textarea.form-input {
 
 @media (min-width: 1250px) {
     main {
-        max-width: 1200px;
+        max-width: 80%;
         display: flex;
         gap: 25px;
         align-items: stretch;
     }
+
+    .avatar-box img {
+        width: 120px;
+    }
+
 
     .main-content {
         width: 75%;
