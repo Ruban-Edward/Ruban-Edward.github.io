@@ -1,229 +1,234 @@
 'use strict';
 
-
-
-// element toggle function
-const elementToggleFunc = function(elem) {
-    elem.classList.toggle("active");
+// Unified element class toggle helper function
+const elementToggleFunc = function (elem) {
+    if (elem) elem.classList.toggle("active");
 }
 
-
-
-// sidebar variables
+// Sidebar responsive layout dynamic toggle handling strategy for mobile viewport metrics
 const sidebar = document.querySelector("[data-sidebar]");
 const sidebarBtn = document.querySelector("[data-sidebar-btn]");
+if (sidebarBtn && sidebar) {
+    sidebarBtn.addEventListener("click", function () {
+        elementToggleFunc(sidebar);
+    });
+}
 
-// sidebar toggle functionality for mobile
-sidebarBtn.addEventListener("click", function() {
-    elementToggleFunc(sidebar);
-});
-
-
-
-// testimonials variables
+// Achievements Modal Window Display Controller
 const testimonialsItem = document.querySelectorAll("[data-testimonials-item]");
 const modalContainer = document.querySelector("[data-modal-container]");
 const modalCloseBtn = document.querySelector("[data-modal-close-btn]");
 const overlay = document.querySelector("[data-overlay]");
-
-// modal variable
-const modalImg = document.querySelector("[data-modal-img]");
 const modalTitle = document.querySelector("[data-modal-title]");
 const modalText = document.querySelector("[data-modal-text]");
 
-// modal toggle function
-const testimonialsModalFunc = function() {
-    modalContainer.classList.toggle("active");
-    overlay.classList.toggle("active");
+const testimonialsModalFunc = function () {
+    if (modalContainer && overlay) {
+        modalContainer.classList.toggle("active");
+        overlay.classList.toggle("active");
+    }
 }
 
-// add click event to all modal items
-for (let i = 0; i < testimonialsItem.length; i++) {
-
-    testimonialsItem[i].addEventListener("click", function() {
-
-        modalImg.src = this.querySelector("[data-testimonials-avatar]").src;
-        modalImg.alt = this.querySelector("[data-testimonials-avatar]").alt;
-        modalTitle.innerHTML = this.querySelector("[data-testimonials-title]").innerHTML;
-        modalText.innerHTML = this.querySelector("[data-testimonials-text]").innerHTML;
-
-        testimonialsModalFunc();
-
-    });
-
+if (testimonialsItem.length > 0) {
+    for (let i = 0; i < testimonialsItem.length; i++) {
+        testimonialsItem[i].addEventListener("click", function () {
+            if (modalTitle && modalText) {
+                modalTitle.innerHTML = this.querySelector("[data-testimonials-title]").innerHTML;
+                modalText.innerHTML = this.querySelector("[data-testimonials-text]").innerHTML;
+                testimonialsModalFunc();
+            }
+        });
+    }
 }
 
-// add click event to modal close button
-modalCloseBtn.addEventListener("click", testimonialsModalFunc);
-overlay.addEventListener("click", testimonialsModalFunc);
+if (modalCloseBtn) modalCloseBtn.addEventListener("click", testimonialsModalFunc);
+if (overlay) overlay.addEventListener("click", testimonialsModalFunc);
 
-
-
-// custom select variables
-const select = document.querySelector("[data-select]");
-const selectItems = document.querySelectorAll("[data-select-item]");
-const selectValue = document.querySelector("[data-selecct-value]");
+// Advanced Filter Pipeline System logic for Portfolio items
 const filterBtn = document.querySelectorAll("[data-filter-btn]");
-
-select.addEventListener("click", function() {
-    elementToggleFunc(this);
-});
-
-// add event in all select items
-for (let i = 0; i < selectItems.length; i++) {
-    selectItems[i].addEventListener("click", function() {
-
-        let selectedValue = this.innerText.toLowerCase();
-        selectValue.innerText = this.innerText;
-        elementToggleFunc(select);
-        filterFunc(selectedValue);
-
-    });
-}
-
-// filter variables
 const filterItems = document.querySelectorAll("[data-filter-item]");
 
-const filterFunc = function(selectedValue) {
-
+const filterFunc = function (selectedValue) {
     for (let i = 0; i < filterItems.length; i++) {
-
         if (selectedValue === "all") {
             filterItems[i].classList.add("active");
-        } else if (selectedValue === filterItems[i].dataset.category) {
+        } else if (selectedValue === filterItems[i].dataset.category.toLowerCase()) {
             filterItems[i].classList.add("active");
         } else {
             filterItems[i].classList.remove("active");
         }
-
     }
-
 }
 
-// add event in all filter button items for large screen
 let lastClickedBtn = filterBtn[0];
-
 for (let i = 0; i < filterBtn.length; i++) {
-
-    filterBtn[i].addEventListener("click", function() {
-
+    filterBtn[i].addEventListener("click", function () {
         let selectedValue = this.innerText.toLowerCase();
-        selectValue.innerText = this.innerText;
         filterFunc(selectedValue);
-
-        lastClickedBtn.classList.remove("active");
+        if (lastClickedBtn) lastClickedBtn.classList.remove("active");
         this.classList.add("active");
         lastClickedBtn = this;
-
     });
-
 }
 
-
-
-// contact form variables
+// Contact Form Frontend Validation handler
 const form = document.querySelector("[data-form]");
 const formInputs = document.querySelectorAll("[data-form-input]");
 const formBtn = document.querySelector("[data-form-btn]");
 
-// add event to all form input field
-for (let i = 0; i < formInputs.length; i++) {
-    formInputs[i].addEventListener("input", function() {
-
-        // check form validation
-        if (form.checkValidity()) {
-            formBtn.removeAttribute("disabled");
-        } else {
-            formBtn.setAttribute("disabled", "");
-        }
-
-    });
+if (form && formInputs.length > 0 && formBtn) {
+    for (let i = 0; i < formInputs.length; i++) {
+        formInputs[i].addEventListener("input", function () {
+            if (form.checkValidity()) {
+                formBtn.removeAttribute("disabled");
+            } else {
+                formBtn.setAttribute("disabled", "");
+            }
+        });
+    }
 }
 
-
-
-// page navigation variables
+// Tabbed Floating Navigation Controller Engine
 const navigationLinks = document.querySelectorAll("[data-nav-link]");
 const pages = document.querySelectorAll("[data-page]");
 
-// add event to all nav link
-for (let i = 0; i < navigationLinks.length; i++) {
-    navigationLinks[i].addEventListener("click", function() {
-
-        for (let i = 0; i < pages.length; i++) {
-            if (this.innerHTML.toLowerCase() === pages[i].dataset.page) {
-                pages[i].classList.add("active");
-                navigationLinks[i].classList.add("active");
-                window.scrollTo(0, 0);
-            } else {
-                pages[i].classList.remove("active");
-                navigationLinks[i].classList.remove("active");
+if (navigationLinks.length > 0 && pages.length > 0) {
+    for (let i = 0; i < navigationLinks.length; i++) {
+        navigationLinks[i].addEventListener("click", function () {
+            const targetPage = this.innerText.toLowerCase();
+            for (let j = 0; j < pages.length; j++) {
+                if (targetPage === pages[j].dataset.page) {
+                    pages[j].classList.add("active");
+                    navigationLinks[j].classList.add("active");
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                } else {
+                    pages[j].classList.remove("active");
+                    navigationLinks[j].classList.remove("active");
+                }
             }
-        }
-
-    });
+        });
+    }
 }
 
-/**
- * Calculation of experinece
- */
-
+// Professional Development Experience Continuous Dynamic Calculations Engine
 function calculateDuration(start, end) {
     const months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
-
-    // Parse the start date
     let [startMonth, startYear] = start.split(" ");
     startMonth = months.indexOf(startMonth);
     startYear = parseInt(startYear);
 
-    // If 'Present' is given for the end date, use the current date
     let endMonth, endYear;
     if (end === "Present") {
         const today = new Date();
         endMonth = today.getMonth();
         endYear = today.getFullYear();
+    } else {
+        let [eMonth, eYear] = end.split(" ");
+        endMonth = months.indexOf(eMonth);
+        endYear = parseInt(eYear);
     }
 
-    // Calculate total months difference
     let totalMonths = (endYear - startYear) * 12 + (endMonth - startMonth);
-
-    // Convert to years and months
     const years = Math.floor(totalMonths / 12);
     const remainingMonths = totalMonths % 12;
 
-    // Generate the result string
     let result = `${start} — ${end} `;
-    if (years == 1 && remainingMonths == 1) {
-        result += ` (${years} year and ${remainingMonths} month)`;
-    } else if (years > 1 && remainingMonths == 1) {
-        result += ` (${years} years and ${remainingMonths} month)`;
-    } else if (years > 1 && remainingMonths > 1) {
-        result += ` (${years} years and ${remainingMonths} months)`;
-    } else if (remainingMonths > 1) {
-        result += ` (${totalMonths} months)`;
+    if (years >= 1) {
+        result += `(${years} yr${years > 1 ? 's' : ''} ${remainingMonths > 0 ? remainingMonths + ' mo' + (remainingMonths > 1 ? 's' : '') : ''})`;
     } else {
-        result += ` (${totalMonths} month)`;
+        result += `(${totalMonths} mos)`;
     }
-
     return result;
 }
 
-document.addEventListener('DOMContentLoaded', function() {
-    // Get the content from the span tags directly
-    const engineerText = document.getElementById("presentDuration").innerText;
+// High Performance Statistics Auto-Counter Engine Module
+const animateCounters = function () {
+    const counters = document.querySelectorAll('.stat-number');
+    counters.forEach(counter => {
+        const target = +counter.getAttribute('data-target');
+        let count = 0;
+        const speed = 20; // Lower numbers equal faster interpolation speeds
+        const updateCount = () => {
+            const increment = Math.ceil(target / speed);
+            if (count < target) {
+                count += increment;
+                if (count > target) count = target;
+                counter.innerText = count + "+";
+                setTimeout(updateCount, 40);
+            } else {
+                counter.innerText = target + "+";
+            }
+        };
+        updateCount();
+    });
+}
 
-    // Split the text to extract the start and end date
-    const [engineerStart, engineerEnd] = engineerText.split(" — ");
+// Integrated Engineering Typography Hero Section Typing Text Functionality Effect
+const runTypingEffect = function () {
+    const words = ["Software Engineer", "Web Developer", "Problem Solver"];
+    let i = 0;
+    let timer;
+    const typingElement = document.querySelector('.typing-text');
 
-    // Calculate and display duration for "Software Engineer"
-    const engineerResult = calculateDuration(engineerStart, engineerEnd);
-    document.getElementById("presentDuration").innerText = engineerResult;
-});
+    if (!typingElement) return;
 
-document.querySelector('.carousel').addEventListener('mouseenter', function() {
-    document.querySelector('.carousel-track').style.animationPlayState = 'paused';
-});
+    function typing() {
+        let word = words[i].split("");
+        var loopTyping = function () {
+            if (word.length > 0) {
+                typingElement.innerHTML += word.shift();
+            } else {
+                setTimeout(deleting, 2000);
+                return false;
+            }
+            timer = setTimeout(loopTyping, 100);
+        };
+        loopTyping();
+    }
 
-document.querySelector('.carousel').addEventListener('mouseleave', function() {
-    document.querySelector('.carousel-track').style.animationPlayState = 'running';
+    function deleting() {
+        let word = words[i].split("");
+        var loopDeleting = function () {
+            if (word.length > 0) {
+                word.pop();
+                typingElement.innerHTML = word.join("");
+            } else {
+                if (words.length > (i + 1)) {
+                    i++;
+                } else {
+                    i = 0;
+                }
+                setTimeout(typing, 500);
+                return false;
+            }
+            timer = setTimeout(loopDeleting, 60);
+        };
+        loopDeleting();
+    }
+    typing();
+}
+
+// Global DOM Content Synchronization Init Loop Engine
+document.addEventListener('DOMContentLoaded', function () {
+    const presentDurationEl = document.getElementById("presentDuration");
+    if (presentDurationEl) {
+        const engineerText = presentDurationEl.innerText;
+        const [engineerStart, engineerEnd] = engineerText.split(" — ");
+        const engineerResult = calculateDuration(engineerStart.trim(), engineerEnd.trim());
+        presentDurationEl.innerText = engineerResult;
+    }
+
+    // Initialize Typing Showcase Effect
+    runTypingEffect();
+
+    // Kill loading overlay once execution performance completes frames rendering
+    const loaderScreen = document.getElementById('loading-screen');
+    if (loaderScreen) {
+        setTimeout(() => {
+            loaderScreen.style.opacity = '0';
+            loaderScreen.style.visibility = 'hidden';
+            // Start counter animations right after loader exits view screen
+            animateCounters();
+        }, 600);
+    }
 });

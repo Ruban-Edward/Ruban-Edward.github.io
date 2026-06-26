@@ -7,810 +7,503 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ruban - Personal Portfolio</title>
 
-    <!--
-    - favicon
-  -->
     <link rel="shortcut icon" href="./assets/images/logo.ico" type="image/x-icon">
 
-    <!--
-    - custom css link
-  -->
     <link rel="stylesheet" href="./assets/css/style.css">
 
-    <!--
-    - google font link
-  -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
 
-    <!--
-    - #MAIN
-  -->
+    <div id="loading-screen">
+        <div class="loader-circle"></div>
+        <p class="loader-text">Loading Portfolio...</p>
+    </div>
 
     <main>
 
-        <!--
-      - #SIDEBAR
-    -->
-
-        <aside class="sidebar" data-sidebar>
+        <aside class="sidebar glass-card" data-sidebar>
 
             <div class="sidebar-info">
-
                 <figure class="avatar-box">
                     <img src="./assets/images/my-avatar.png" alt="Ruban Edward" width="80">
                 </figure>
 
                 <div class="info-content">
                     <h1 class="name" title="Ruban Edward">Ruban Edward</h1>
-
-                    <p class="title">Software developer</p>
+                    <p class="title">Software Engineer</p>
                 </div>
 
                 <button class="info_more-btn" data-sidebar-btn>
                     <span>Show Contacts</span>
-
                     <ion-icon name="chevron-down"></ion-icon>
                 </button>
-
             </div>
 
             <div class="sidebar-info_more">
-
                 <div class="separator"></div>
 
                 <ul class="contacts-list">
-
                     <li class="contact-item">
-
-                        <div class="icon-box">
-                            <ion-icon name="mail-outline"></ion-icon>
-                        </div>
-
+                        <div class="icon-box"><ion-icon name="mail-outline"></ion-icon></div>
                         <div class="contact-info">
                             <p class="contact-title">Email</p>
-
                             <a href="mailto:rubanedward769@gmail.com" class="contact-link">rubanedward769@gmail.com</a>
                         </div>
-
                     </li>
 
                     <li class="contact-item">
-
-                        <div class="icon-box">
-                            <ion-icon name="phone-portrait-outline"></ion-icon>
-                        </div>
-
+                        <div class="icon-box"><ion-icon name="phone-portrait-outline"></ion-icon></div>
                         <div class="contact-info">
                             <p class="contact-title">Phone</p>
-
                             <a href="tel:+918870479229" class="contact-link">+91 8870479229</a>
                         </div>
-
                     </li>
 
                     <li class="contact-item">
-
-                        <div class="icon-box">
-                            <ion-icon name="calendar-outline"></ion-icon>
-                        </div>
-
+                        <div class="icon-box"><ion-icon name="calendar-outline"></ion-icon></div>
                         <div class="contact-info">
                             <p class="contact-title">Birthday</p>
-
                             <time datetime="2002-07-29">July 29, 2002</time>
                         </div>
-
                     </li>
 
                     <li class="contact-item">
-
-                        <div class="icon-box">
-                            <ion-icon name="location-outline"></ion-icon>
-                        </div>
-
+                        <div class="icon-box"><ion-icon name="location-outline"></ion-icon></div>
                         <div class="contact-info">
                             <p class="contact-title">Location</p>
-                            <a href="https://www.google.com/maps/place/Puducherry/@11.9362923,79.7723282,13z/data=!3m1!4b1!4m6!3m5!1s0x3a5361ab8e49cfcf:0xcc6bd326d2f0b04e!8m2!3d11.9415915!4d79.8083133!16zL20vMDc3Nzl3?entry=ttu&g_ep=EgoyMDI0MDkxOC4xIKXMDSoASAFQAw%3D%3D" target="_blank">
+                            <a href="https://maps.google.com" target="_blank">
                                 <address>Pondicherry, India</address>
                             </a>
-
                         </div>
-
                     </li>
-
                 </ul>
 
                 <div class="separator"></div>
 
                 <ul class="social-list">
-
                     <li class="social-item">
                         <a href="https://www.linkedin.com/in/ruban-edward/" class="social-link" target="_blank">
                             <ion-icon name="logo-linkedin"></ion-icon>
                         </a>
                     </li>
-
                     <li class="social-item">
                         <a href="https://github.com/Ruban-Edward" class="social-link" target="_blank">
                             <ion-icon name="logo-github"></ion-icon>
                         </a>
                     </li>
-
                     <li class="social-item">
-                        <a href="https://www.instagram.com/_r.u.b.a.n_e.d.w.a.r.d_29_/" class="social-link" target="_blank">
+                        <a href="https://www.instagram.com/_r.u.b.a.n_e.d.w.a.r.d_29_/" class="social-link"
+                            target="_blank">
                             <ion-icon name="logo-instagram"></ion-icon>
                         </a>
                     </li>
-
                 </ul>
-
             </div>
 
         </aside>
 
-
-
-
-
-        <!--
-      - #main-content
-    -->
-
         <div class="main-content">
 
-            <!--
-        - #NAVBAR
-      -->
-
-            <nav class="navbar">
-
+            <nav class="navbar glass-card">
                 <ul class="navbar-list">
-
-                    <li class="navbar-item">
-                        <button class="navbar-link  active" data-nav-link>About</button>
-                    </li>
-
-                    <li class="navbar-item">
-                        <button class="navbar-link" data-nav-link>Resume</button>
-                    </li>
-
-                    <li class="navbar-item">
-                        <button class="navbar-link" data-nav-link>Portfolio</button>
-                    </li>
-
-                    <li class="navbar-item">
-                        <button class="navbar-link" data-nav-link>Contact</button>
-                    </li>
-
+                    <li class="navbar-item"><button class="navbar-link active" data-nav-link>About</button></li>
+                    <li class="navbar-item"><button class="navbar-link" data-nav-link>Resume</button></li>
+                    <li class="navbar-item"><button class="navbar-link" data-nav-link>Portfolio</button></li>
+                    <li class="navbar-item"><button class="navbar-link" data-nav-link>Contact</button></li>
                 </ul>
-
             </nav>
 
-
-
-
-
-            <!--
-        - #ABOUT
-      -->
-
-            <article class="about  active" data-page="about">
-
+            <article class="about active glass-card" data-page="about">
                 <header>
                     <h2 class="h2 article-title">About me</h2>
                 </header>
 
+                <section class="hero-banner">
+                    <div class="hero-content">
+                        <h3>Hi There! I am a</h3>
+                        <h1 class="typing-element"><span class="typing-text"></span><span class="typed-cursor">|</span>
+                        </h1>
+                        <p class="hero-subtitle">Engineering innovative, clean, and highly optimized scalable web
+                            solutions.</p>
+                        <div class="hero-ctas">
+                            <button class="cta-btn primary-btn"
+                                onclick="document.querySelector('[data-nav-link=\'Resume\']').click();">View
+                                Resume</button>
+                            <button class="cta-btn secondary-btn"
+                                onclick="document.querySelector('[data-nav-link=\'Contact\']').click();">Let's
+                                Talk</button>
+                        </div>
+                    </div>
+                </section>
+
                 <section class="about-text">
                     <p>
                         I am a Software Developer from Chennai, India, currently working at
-                        Infiniti Software Solutions. I hold a Bachelor of Technology degree in
-                        Computer and Communication Engineering from Sri Manakula Vinayagar Engineering
-                        College in Pondicherry, India. As a student, A student who used to perform above average..
+                        <strong>Infiniti Software Solutions</strong>. I hold a Bachelor of Technology degree in
+                        Computer and Communication Engineering from Sri Manakula Vinayagar Engineering College in
+                        Pondicherry, India.
                     </p>
-                    <h5 class="h5 service-title1">Most Enjoying About My Work</h5>
+                    <h5 class="h5 service-title1">What Powers My Development Strategy</h5>
                     <p>
-                        One of the most enjoyable aspects of coding is obtaining
-                        results that are error-free.
-                        My role is to analyze and deliver optimized solutions to address
-                        customer problems efficiently. </p>
+                        One of the most enjoyable aspects of coding is breaking complex architectural limitations to
+                        arrive at perfectly clean, error-free deployments. My primary goal is to analyze constraints
+                        data-by-data and deliver optimized enterprise solutions.
+                    </p>
                 </section>
 
-
-                <!--
-          - service
-        -->
+                <section class="statistics-section">
+                    <div class="stats-grid">
+                        <div class="stat-box glass-card">
+                            <h2 class="stat-number" data-target="2">0</h2>
+                            <p class="stat-label">Years Experience</p>
+                        </div>
+                        <div class="stat-box glass-card">
+                            <h2 class="stat-number" data-target="5">0</h2>
+                            <p class="stat-label">Completed Projects</p>
+                        </div>
+                        <div class="stat-box glass-card">
+                            <h2 class="stat-number" data-target="6">0</h2>
+                            <p class="stat-label">Certifications</p>
+                        </div>
+                    </div>
+                </section>
 
                 <section class="service">
-
-                    <h3 class="h3 service-title">What i'm doing</h3>
-
+                    <h3 class="h3 service-title">What I'm Doing</h3>
                     <ul class="service-list">
-
-                        <li class="service-item">
-
+                        <li class="service-item glass-card">
                             <div class="service-icon-box">
                                 <img src="./assets/images/icon-dev.svg" alt="Web development icon" width="40">
                             </div>
-
                             <div class="service-content-box">
-                                <h4 class="h4 service-item-title">Web development</h4>
-
-                                <p class="service-item-text">
-                                    I work on building and maintaining end-to-end web applications.
-                                </p>
+                                <h4 class="h4 service-item-title">Web Development</h4>
+                                <p class="service-item-text">Building resilient, maintainable, end-to-end fullstack web
+                                    products.</p>
                             </div>
-
                         </li>
 
-                        <li class="service-item">
-
+                        <li class="service-item glass-card">
                             <div class="service-icon-box">
-                                <img src="./assets/images/icon-aiml.png" alt="mobile app icon" width="40">
+                                <img src="./assets/images/icon-aiml.png" alt="AI & ML icon" width="40">
                             </div>
-
                             <div class="service-content-box">
-                                <h4 class="h4 service-item-title">Artificial Intelligence & Machine Learning</h4>
-
-                                <p class="service-item-text">
-                                    I apply AI and ML techniques to solve real-world problems.
-                                </p>
+                                <h4 class="h4 service-item-title">AI & Machine Learning</h4>
+                                <p class="service-item-text">Applying algorithmic models and data pipelines to crack
+                                    analytics problems.</p>
                             </div>
-
                         </li>
-
                     </ul>
-
                 </section>
-
-
-                <!--
-          - testimonials
-        -->
 
                 <section class="testimonials">
-
-                    <h3 class="h3 testimonials-title">Testimonials</h3>
-
+                    <h3 class="h3 testimonials-title">Key Achievements</h3>
                     <ul class="testimonials-list has-scrollbar">
-
                         <li class="testimonials-item">
-                            <div class="content-card" data-testimonials-item>
-
+                            <div class="content-card glass-card" data-testimonials-item>
                                 <figure class="testimonials-avatar-box">
-                                    <img src="./assets/images/avatar-1.png" alt="Person 1" width="60" data-testimonials-avatar>
+                                    <div class="achievement-icon-wrapper"><ion-icon name="ribbon-outline"></ion-icon>
+                                    </div>
                                 </figure>
-
-                                <h4 class="h4 testimonials-item-title" data-testimonials-title>Person 1</h4>
-
+                                <h4 class="h4 testimonials-item-title" data-testimonials-title>Academic Excellence</h4>
                                 <div class="testimonials-text" data-testimonials-text>
-                                    <p>
-                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum qui sint ad fuga minima odio id quas recusandae tenetur harum doloribus cum earum ipsum tempora enim distinctio, facere nemo reprehenderit.
-                                    </p>
+                                    <p>Graduated with a highly competitive Cumulative Grade Point Average (CGPA) of 8.61
+                                        in Computer and Communication Engineering.</p>
                                 </div>
-
                             </div>
                         </li>
 
                         <li class="testimonials-item">
-                            <div class="content-card" data-testimonials-item>
-
+                            <div class="content-card glass-card" data-testimonials-item>
                                 <figure class="testimonials-avatar-box">
-                                    <img src="./assets/images/avatar-2.png" alt="Person 2" width="60" data-testimonials-avatar>
+                                    <div class="achievement-icon-wrapper"><ion-icon
+                                            name="shield-checkmark-outline"></ion-icon></div>
                                 </figure>
-
-                                <h4 class="h4 testimonials-item-title" data-testimonials-title>Person 2</h4>
-
+                                <h4 class="h4 testimonials-item-title" data-testimonials-title>Cloud Credentialed</h4>
                                 <div class="testimonials-text" data-testimonials-text>
-                                    <p>
-                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Id, quia porro deleniti repellendus dignissimos reprehenderit delectus iste vel veritatis, sapiente doloribus inventore placeat cumque nihil voluptatum velit soluta adipisci fugiat.
-                                    </p>
+                                    <p>Successfully completed and secured the industry-recognized Microsoft Azure
+                                        Fundamentals (AZ-900) cloud specification architecture credential.</p>
                                 </div>
-
                             </div>
                         </li>
-
-                        <li class="testimonials-item">
-                            <div class="content-card" data-testimonials-item>
-
-                                <figure class="testimonials-avatar-box">
-                                    <img src="./assets/images/avatar-3.png" alt="Person 3" width="60" data-testimonials-avatar>
-                                </figure>
-
-                                <h4 class="h4 testimonials-item-title" data-testimonials-title>Person 3</h4>
-
-                                <div class="testimonials-text" data-testimonials-text>
-                                    <p>
-                                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Perferendis a sint iure inventore iste consequuntur quod error tenetur illo maxime eos necessitatibus minima vel molestias ex voluptas fuga, voluptate repellendus?
-                                    </p>
-                                </div>
-
-                            </div>
-                        </li>
-
-                        <li class="testimonials-item">
-                            <div class="content-card" data-testimonials-item>
-
-                                <figure class="testimonials-avatar-box">
-                                    <img src="./assets/images/avatar-4.png" alt="Person 4" width="60" data-testimonials-avatar>
-                                </figure>
-
-                                <h4 class="h4 testimonials-item-title" data-testimonials-title>Person 4</h4>
-
-                                <div class="testimonials-text" data-testimonials-text>
-                                    <p>
-                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi, cum.
-                                    </p>
-                                </div>
-
-                            </div>
-                        </li>
-
                     </ul>
-
                 </section>
 
-
-                <!--
-          - testimonials modal
-        -->
-
                 <div class="modal-container" data-modal-container>
-
                     <div class="overlay" data-overlay></div>
-
-                    <section class="testimonials-modal">
-
-                        <button class="modal-close-btn" data-modal-close-btn>
-                            <ion-icon name="close-outline"></ion-icon>
-                        </button>
-
-                        <div class="modal-img-wrapper">
-                            <figure class="modal-avatar-box">
-                                <img src="./assets/images/avatar-1.png" alt="Person" width="80" data-modal-img>
-                            </figure>
-
-                            <img src="./assets/images/icon-quote.svg" alt="quote icon">
-                        </div>
-
+                    <section class="testimonials-modal glass-card">
+                        <button class="modal-close-btn" data-modal-close-btn><ion-icon
+                                name="close-outline"></ion-icon></button>
                         <div class="modal-content">
-
-                            <h4 class="h3 modal-title" data-modal-title>Person</h4>
-
-                            <time datetime="2021-06-14">DD MMMM, YYYY</time>
-
+                            <h4 class="h3 modal-title" data-modal-title>Achievement Title</h4>
                             <div data-modal-text>
-                                <p>
-
-                                </p>
+                                <p></p>
                             </div>
-
                         </div>
-
                     </section>
-
                 </div>
-
             </article>
 
-
-
-
-
-            <!-- RESUME -->
-
-            <article class="resume" data-page="resume">
-
+            <article class="resume glass-card" data-page="resume">
                 <header>
                     <h2 class="h2 article-title">Resume</h2>
                 </header>
 
                 <section class="timeline">
-
                     <div class="title-wrapper">
-                        <div class="icon-box">
-                            <ion-icon name="book-outline"></ion-icon>
-                        </div>
-
+                        <div class="icon-box"><ion-icon name="book-outline"></ion-icon></div>
                         <h3 class="h3">Education</h3>
                     </div>
-
                     <ol class="timeline-list">
-
                         <li class="timeline-item">
-
                             <h4 class="h4 timeline-item-title">Sri Manakula Vinayagar Engineering College</h4>
-
                             <span>2020 — 2024</span>
-
-                            <p class="timeline-text">
-                                Bachelor of Technology, Computer and Communication Engineering.<br>
-                                CGPA 8.61.
-                            </p>
-
+                            <p class="timeline-text">Bachelor of Technology, Computer and Communication
+                                Engineering.<br><strong>CGPA: 8.61</strong></p>
                         </li>
-
                         <li class="timeline-item">
-
                             <h4 class="h4 timeline-item-title">St. Patrick Matric Higher Secondary School</h4>
-
                             <span>2018 — 2020</span>
-
-                            <p class="timeline-text">
-                                Higher Secondary School Certificate.<br>
-                                Percentage - 79.33%
-                            </p>
-
+                            <p class="timeline-text">Higher Secondary School Certificate.<br>Percentage: 79.33%</p>
                         </li>
-
-                        <li class="timeline-item">
-
-                            <h4 class="h4 timeline-item-title">St. Patrick Matric Higher Secondary School</h4>
-
-                            <span>2008 — 2018</span>
-
-                            <p class="timeline-text">
-                                Secondary School Leaving Certificate.<br>
-                                Percentage - 95.8%
-                            </p>
-
-                        </li>
-
                     </ol>
-
                 </section>
 
                 <section class="timeline">
-
                     <div class="title-wrapper">
-                        <div class="icon-box">
-                            <ion-icon name="book-outline"></ion-icon>
-                        </div>
-
+                        <div class="icon-box"><ion-icon name="briefcase-outline"></ion-icon></div>
                         <h3 class="h3">Experience</h3>
                     </div>
-
                     <ol class="timeline-list">
-
                         <li class="timeline-item">
-
-                            <h4 class="h4 timeline-item-title">Infiniti Software Solutions - </h4><span class="designation">Software Engineer</span>
-
+                            <h4 class="h4 timeline-item-title">Infiniti Software Solutions - </h4><span
+                                class="designation">Software Engineer</span>
                             <span id="presentDuration">Aug 2024 — Present</span>
-
-                            <p class="timeline-text">
-                                Full - time
-                            </p>
-
+                            <p class="timeline-text">Full-time engineering role focused on enterprise application scale
+                                optimization.</p>
                         </li>
-
                         <li class="timeline-item">
-
-                            <h4 class="h4 timeline-item-title">Infiniti Software Solutions - </h4><span class="designation">Software Trainee</span>
-
+                            <h4 class="h4 timeline-item-title">Infiniti Software Solutions - </h4><span
+                                class="designation">Software Trainee</span>
                             <span>Apr 2024 — Jul 2024 (4 months)</span>
-
-                            <p class="timeline-text">
-                                Apprenticeship
-                            </p>
-
+                            <p class="timeline-text">Apprenticeship and core structural onboarding.</p>
                         </li>
-
                     </ol>
-
                 </section>
 
                 <section class="skill">
-
-                    <h3 class="h3 skills-title">My skills</h3>
-
+                    <h3 class="h3 skills-title">Technical Expertise</h3>
                     <div class="carousel">
                         <div class="carousel-track">
-                            <div class="carousel-item">
-                                <div class="carousel-img">
-                                    <img src="assets/images/php.png" alt="Php" />
-                                </div>
+                            <div class="carousel-item glass-card">
                                 <div class="carousel-text">
-                                    <p>Php &nbsp;</p>
+                                    <p>PHP</p>
                                 </div>
                             </div>
-                            <div class="carousel-item">
-                                <div class="carousel-img">
-                                    <img src="assets/images/java.png" alt="Java" />
-                                </div>
+                            <div class="carousel-item glass-card">
                                 <div class="carousel-text">
                                     <p>Java</p>
                                 </div>
                             </div>
-                            <div class="carousel-item">
-                                <div class="carousel-img">
-                                    <img src="assets/images/python.png" alt="Python" />
-                                </div>
+                            <div class="carousel-item glass-card">
                                 <div class="carousel-text">
                                     <p>Python</p>
                                 </div>
                             </div>
-                            <div class="carousel-item">
-                                <div class="carousel-img">
-                                    <img src="assets/images/html.png" alt="Html" />
-                                </div>
+                            <div class="carousel-item glass-card">
                                 <div class="carousel-text">
-                                    <p>Html</p>
+                                    <p>HTML5</p>
                                 </div>
                             </div>
-                            <div class="carousel-item">
-                                <div class="carousel-img">
-                                    <img src="assets/images/css.png" alt="Css" />
-                                </div>
+                            <div class="carousel-item glass-card">
                                 <div class="carousel-text">
-                                    <p>Css &nbsp;</p>
+                                    <p>CSS3</p>
                                 </div>
                             </div>
-                            <div class="carousel-item">
-                                <div class="carousel-img">
-                                    <img src="assets/images/javascript.png" alt="Js" />
-                                </div>
+                            <div class="carousel-item glass-card">
                                 <div class="carousel-text">
-                                    <p>Javascript</p>
+                                    <p>JavaScript</p>
                                 </div>
                             </div>
-                            <div class="carousel-item">
-                                <div class="carousel-img">
-                                    <img src="assets/images/mysql.png" alt="Mysql" />
-                                </div>
+                            <div class="carousel-item glass-card">
                                 <div class="carousel-text">
                                     <p>MySQL</p>
                                 </div>
                             </div>
-
+                            <div class="carousel-item glass-card">
+                                <div class="carousel-text">
+                                    <p>PHP</p>
+                                </div>
+                            </div>
+                            <div class="carousel-item glass-card">
+                                <div class="carousel-text">
+                                    <p>Java</p>
+                                </div>
+                            </div>
+                            <div class="carousel-item glass-card">
+                                <div class="carousel-text">
+                                    <p>Python</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
-
                 </section>
 
-                <section class="certificate"></section>
-
-                <h3 class="h3 certificate-title">My Certifications</h3>
-
-                <ul class="certificate-list">
-
-                    <li class="certificate-item">
-                        <h4 class="h4 certificate-item-title">Microsoft - </h4>
-                        <span class="certificate">Azure Foundamentals (AZ-900)</span>
-                    </li>
-
-                    <li class="certificate-item">
-                        <h4 class="h4 certificate-item-title">Microsoft - </h4>
-                        <span class="certificate">Web Development</span>
-                    </li>
-
-                    <li class="certificate-item">
-                        <h4 class="h4 certificate-item-title">NPTEL - </h4>
-                        <span class="certificate">Programing in Java</span>
-                    </li>
-
-                    <li class="certificate-item">
-                        <h4 class="h4 certificate-item-title">NPTEL - </h4>
-                        <span class="certificate">Machine learning</span>
-                    </li>
-
-                    <li class="certificate-item">
-                        <h4 class="h4 certificate-item-title">Geekster - </h4>
-                        <span class="certificate">Git & Github</span>
-                    </li>
-
-                    <li class="certificate-item">
-                        <h4 class="h4 certificate-item-title">Jacob Learning - </h4>
-                        <span class="certificate">Power BI</span>
-                    </li>
-
-                </ul>
-
+                <section class="certificate">
+                    <h3 class="h3 certificate-title">My Certifications</h3>
+                    <ul class="certificate-list">
+                        <li class="certificate-item">
+                            <h4 class="h4 certificate-item-title">Microsoft - </h4> <span class="certificate">Azure
+                                Fundamentals (AZ-900)</span>
+                        </li>
+                        <li class="certificate-item">
+                            <h4 class="h4 certificate-item-title">Microsoft - </h4> <span class="certificate">Web
+                                Development Specialist</span>
+                        </li>
+                        <li class="certificate-item">
+                            <h4 class="h4 certificate-item-title">NPTEL - </h4> <span class="certificate">Programming in
+                                Java</span>
+                        </li>
+                        <li class="certificate-item">
+                            <h4 class="h4 certificate-item-title">NPTEL - </h4> <span class="certificate">Machine
+                                Learning Models</span>
+                        </li>
+                        <li class="certificate-item">
+                            <h4 class="h4 certificate-item-title">Geekster - </h4> <span class="certificate">Git &
+                                GitHub Integration</span>
+                        </li>
+                    </ul>
                 </section>
-
             </article>
 
-
-
-
-
-            <!--
-        - #PORTFOLIO
-      -->
-
-            <article class="portfolio" data-page="portfolio">
-
+            <article class="portfolio glass-card" data-page="portfolio">
                 <header>
                     <h2 class="h2 article-title">Portfolio</h2>
                 </header>
 
                 <section class="projects">
-
                     <ul class="filter-list">
-
-                        <li class="filter-item">
-                            <button class="active" data-filter-btn>All</button>
-                        </li>
-
-                        <li class="filter-item">
-                            <button data-filter-btn>Machine Learning</button>
-                        </li>
-
-                        <li class="filter-item">
-                            <button data-filter-btn>Artificial Intelligence</button>
-                        </li>
-
-                        <li class="filter-item">
-                            <button data-filter-btn>Applications</button>
-                        </li>
-
+                        <li class="filter-item"><button class="active" data-filter-btn>All</button></li>
+                        <li class="filter-item"><button data-filter-btn>Machine Learning</button></li>
+                        <li class="filter-item"><button data-filter-btn>Artificial Intelligence</button></li>
+                        <li class="filter-item"><button data-filter-btn>Applications</button></li>
                     </ul>
-
-                    <div class="filter-select-box">
-
-                        <button class="filter-select" data-select>
-
-                            <div class="select-value" data-selecct-value>Select category</div>
-
-                            <div class="select-icon">
-                                <ion-icon name="chevron-down"></ion-icon>
-                            </div>
-
-                        </button>
-
-                        <ul class="select-list">
-
-                            <li class="select-item">
-                                <button data-select-item>All</button>
-                            </li>
-
-                            <li class="select-item">
-                                <button data-select-item>Machine Learning</button>
-                            </li>
-
-                            <li class="select-item">
-                                <button data-select-item>Artificial Intelligence</button>
-                            </li>
-
-                            <li class="select-item">
-                                <button data-select-item>Applications</button>
-                            </li>
-
-                        </ul>
-
-                    </div>
 
                     <ul class="project-list">
-
-                        <li class="project-item  active" data-filter-item data-category="machine learning">
-                            <a href="https://github.com/Ruban-Edward/UPI-Fraud-Detection" target="_blank">
-
-                                <figure class="project-img">
-                                    <div class="project-item-icon-box">
-                                        <ion-icon name="code-slash-outline"></ion-icon>
+                        <li class="project-item active" data-filter-item data-category="machine learning">
+                            <div class="project-card-wrapper glass-card">
+                                <div class="project-meta-info">
+                                    <h3 class="project-title">UPI Fraud Detection</h3>
+                                    <p class="project-category">Machine Learning</p>
+                                    <div class="tech-badges">
+                                        <span class="badge">Python</span>
+                                        <span class="badge">Scikit-Learn</span>
                                     </div>
-
-                                    <img src="assets/images/project-1.png" alt="UPI" loading="lazy">
-                                </figure>
-
-                                <h3 class="project-title">UPI Fraud Detection</h3>
-
-                                <p class="project-category">Machine Learning</p>
-
-                            </a>
+                                    <div class="project-links">
+                                        <a href="https://github.com/Ruban-Edward/UPI-Fraud-Detection" target="_blank"
+                                            title="View Source Code"><ion-icon name="logo-github"></ion-icon></a>
+                                        <a href="#" title="Live Demo"><ion-icon name="open-outline"></ion-icon></a>
+                                    </div>
+                                </div>
+                            </div>
                         </li>
 
-                        <li class="project-item  active" data-filter-item data-category="artificial intelligence">
-                            <a href="https://github.com/Ruban-Edward/AI-Virtual-Mouse" target="_blank">
-
-                                <figure class="project-img">
-                                    <div class="project-item-icon-box">
-                                        <ion-icon name="code-slash-outline"></ion-icon>
+                        <li class="project-item active" data-filter-item data-category="artificial intelligence">
+                            <div class="project-card-wrapper glass-card">
+                                <div class="project-meta-info">
+                                    <h3 class="project-title">AI Virtual Mouse</h3>
+                                    <p class="project-category">Artificial Intelligence</p>
+                                    <div class="tech-badges">
+                                        <span class="badge">Python</span>
+                                        <span class="badge">OpenCV</span>
                                     </div>
-
-                                    <img src="assets/images/project-2.png" alt="Virtual Mouse" loading="lazy">
-                                </figure>
-
-                                <h3 class="project-title">AI Virtual Mouse</h3>
-
-                                <p class="project-category">Artificial Intelligence</p>
-
-                            </a>
+                                    <div class="project-links">
+                                        <a href="https://github.com/Ruban-Edward/AI-Virtual-Mouse" target="_blank"
+                                            title="View Source Code"><ion-icon name="logo-github"></ion-icon></a>
+                                        <a href="#" title="Live Demo"><ion-icon name="open-outline"></ion-icon></a>
+                                    </div>
+                                </div>
+                            </div>
                         </li>
 
-                        <li class="project-item  active" data-filter-item data-category="applications">
-                            <a href="#" target="_blank">
-
-                                <figure class="project-img">
-                                    <div class="project-item-icon-box">
-                                        <ion-icon name="code-slash-outline"></ion-icon>
+                        <li class="project-item active" data-filter-item data-category="applications">
+                            <div class="project-card-wrapper glass-card">
+                                <div class="project-meta-info">
+                                    <h3 class="project-title">Bus Reservation System</h3>
+                                    <p class="project-category">Applications</p>
+                                    <div class="tech-badges">
+                                        <span class="badge">Java</span>
+                                        <span class="badge">MySQL</span>
                                     </div>
-
-                                    <img src="assets/images/project-3.png" alt="Bus Reservation" loading="lazy">
-                                </figure>
-
-                                <h3 class="project-title">Bus Reservation System</h3>
-
-                                <p class="project-category">Applications</p>
-
-                            </a>
+                                    <div class="project-links">
+                                        <a href="#" target="_blank" title="View Source Code"><ion-icon
+                                                name="logo-github"></ion-icon></a>
+                                        <a href="#" title="Live Demo"><ion-icon name="open-outline"></ion-icon></a>
+                                    </div>
+                                </div>
+                            </div>
                         </li>
-
                     </ul>
 
+                    <div class="github-profile-section glass-card">
+                        <div class="github-header">
+                            <ion-icon name="logo-github"></ion-icon>
+                            <h4>Explore My Code Base Ecosystem</h4>
+                        </div>
+                        <p>I constantly commit optimizations and build continuous pipeline deployments directly onto
+                            GitHub.</p>
+                        <a href="https://github.com/Ruban-Edward" target="_blank"
+                            class="cta-btn primary-btn sync-btn">Visit GitHub Profile</a>
+                    </div>
                 </section>
-
             </article>
 
-
-
-            <!--
-        - #CONTACT
-      -->
-
-            <article class="contact" data-page="contact">
-
+            <article class="contact glass-card" data-page="contact">
                 <header>
                     <h2 class="h2 article-title">Contact</h2>
                 </header>
 
-                <section class="mapbox" data-mapbox>
-                    <figure>
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d62456.79931284588!2d79.77232812035018!3d11.936376279861562!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a5361ab8e49cfcf%3A0xcc6bd326d2f0b04e!2sPuducherry!5e0!3m2!1sen!2sin!4v1728840846236!5m2!1sen!2sin" width="400" height="300" loading="lazy"></iframe>
+                <section class="mapbox">
+                    <figure class="mapbox-figure">
+                        <iframe src="https://maps.google.com/maps?q=Pondicherry&t=&z=13&ie=UTF8&iwloc=&output=embed"
+                            loading="lazy"></iframe>
                     </figure>
                 </section>
 
                 <section class="contact-form">
-
                     <h3 class="h3 form-title">Contact Form</h3>
-
                     <form action="https://api.web3forms.com/submit" method="POST" class="form" data-form>
-
                         <input type="hidden" name="access_key" value="43dc81e4-0be2-4b84-829e-a1384a1e070c">
-
                         <div class="input-wrapper">
-                            <input type="text" name="fullname" class="form-input" placeholder="Full name" required data-form-input>
-
-                            <input type="email" name="email" class="form-input" placeholder="Email address" required data-form-input>
+                            <input type="text" name="fullname" class="form-input" placeholder="Full name" required
+                                data-form-input>
+                            <input type="email" name="email" class="form-input" placeholder="Email address" required
+                                data-form-input>
                         </div>
-
-                        <textarea name="message" class="form-input" placeholder="Your Message" required data-form-input></textarea>
-
+                        <textarea name="message" class="form-input" placeholder="Your Message" required
+                            data-form-input></textarea>
                         <button class="form-btn" type="submit" disabled data-form-btn>
                             <ion-icon name="paper-plane"></ion-icon>
                             <span>Send Message</span>
                         </button>
-
                     </form>
-
                 </section>
-
             </article>
 
-        </div>
+            <footer class="portfolio-footer">
+                <p>&copy; 2026 Ruban Edward. Built with passion using pure vanilla performance metrics.</p>
+            </footer>
 
+        </div>
     </main>
 
-
-
-
-
-
-    <!--
-    - custom js link
-  -->
     <script src="./assets/js/script.js"></script>
-
-    <!--
-    - ionicon link
-  -->
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-
 </body>
 
 </html>
