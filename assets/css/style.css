@@ -217,6 +217,10 @@ article.active {
     font-size: var(--fs-2);
 }
 
+.typing-element {
+    display: flex;
+}
+
 .article-title {
     position: relative;
     padding-bottom: 10px;
@@ -237,7 +241,7 @@ article.active {
 /* Sidebar Navigation Panel Layout Rules */
 .sidebar {
     margin-bottom: 20px;
-    max-height: 112px;
+    max-height: 150px;
     overflow: hidden;
     transition: max-height 0.5s ease-in-out;
     padding: 15px;
@@ -1106,6 +1110,12 @@ textarea.form-input {
         border-radius: 0 20px;
         padding: 0 30px;
         background: rgba(30, 30, 30, 0.4);
+    }
+
+    /* Ensure the navbar is positioned relative to the main content
+       so it doesn't escape the layout between 1024px and 1250px */
+    .main-content {
+        position: relative;
     }
 
     .service-list {
