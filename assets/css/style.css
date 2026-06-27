@@ -1033,6 +1033,7 @@ textarea.form-input {
 .portfolio-footer p {
     font-size: 12px;
     color: var(--light-gray-70);
+    display: ruby;
 }
 
 /*-----------------------------------*\

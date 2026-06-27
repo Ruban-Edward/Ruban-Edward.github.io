@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You</title>
+
+    <!-- Redirect after 5 seconds -->
+    <!-- <meta http-equiv="refresh" content="3;url=https://ruban-edward.github.io/"> -->
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: #0d0d0d;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 500px;
+        }
+
+        .check {
+            width: 150px;
+            font-size: 70px;
+            display: inline-flex;
+        }
+
+        .check img {
+            width: 100%;
+        }
+
+        h1 {
+            margin: 20px 0 10px;
+            font-size: 2rem;
+        }
+
+        p {
+            color: #d1d5db;
+            margin-bottom: 25px;
+            line-height: 1.6;
+        }
+
+        a {
+            display: inline-block;
+            padding: 12px 25px;
+            background: #ffdb70;;
+            color: #000;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: 0.3s;
+        }
+
+        a:hover {
+            background: #ffdb70;
+        }
+    </style>
+
+    <script>
+        // Prevent returning to the thank you page via Back button
+        history.pushState(null, null, location.href);
+
+        window.addEventListener("popstate", function () {
+            window.location.replace("https://ruban-edward.github.io/");
+        });
+
+        // Automatic redirect after 3 seconds
+        // setTimeout(() => {
+        //     window.location.replace("https://ruban-edward.github.io/");
+        // }, 3000);
+    </script>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="check">
+            <img src="../assets/images/succes.png" alt="success">
+        </div>
+        <h1>Thank You!</h1>
+        <p>Your message has been sent successfully.<br>
+            I'll get back to you as soon as possible.</p>
+
+        <a href="https://ruban-edward.github.io/">Return to Portfolio</a>
+    </div>
+
+</body>
+
+</html>
