@@ -7,7 +7,7 @@ A modern, responsive personal portfolio website showcasing my projects, skills, 
 ### 💻 Desktop View
 
 <p align="center">
-  <img src="assets/images/web.png" alt="Desktop Portfolio Preview" width="900">
+   <img src="assets/images/web.png" alt="Desktop Portfolio Preview" width="900">
 </p>
 
 ### 📱 Mobile View
