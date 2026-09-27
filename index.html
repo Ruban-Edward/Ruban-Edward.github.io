@@ -112,9 +112,9 @@
             <nav class="navbar glass-card">
                 <ul class="navbar-list">
                     <li class="navbar-item"><button class="navbar-link active" data-nav-link>About</button></li>
-                    <li class="navbar-item"><button class="navbar-link" data-nav-link>Resume</button></li>
+                    <li class="navbar-item"><button class="navbar-link" data-nav-link id="resume-nav-link">Resume</button></li>
                     <li class="navbar-item"><button class="navbar-link" data-nav-link>Portfolio</button></li>
-                    <li class="navbar-item"><button class="navbar-link" data-nav-link>Contact</button></li>
+                    <li class="navbar-item"><button class="navbar-link" data-nav-link id="contact-nav-link">Contact</button></li>
                 </ul>
             </nav>
 
@@ -132,10 +132,10 @@
                             solutions.</p>
                         <div class="hero-ctas">
                             <button class="cta-btn primary-btn"
-                                onclick="document.querySelector('[data-nav-link=\'Resume\']').click();">View
+                                onclick="document.getElementById('resume-nav-link').click();">View
                                 Resume</button>
                             <button class="cta-btn secondary-btn"
-                                onclick="document.querySelector('[data-nav-link=\'Contact\']').click();">Let's
+                                onclick="document.getElementById('contact-nav-link').click();">Let's
                                 Talk</button>
                         </div>
                     </div>
