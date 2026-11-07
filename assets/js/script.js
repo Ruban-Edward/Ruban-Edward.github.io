@@ -11,6 +11,9 @@ const sidebarBtn = document.querySelector("[data-sidebar-btn]");
 if (sidebarBtn && sidebar) {
     sidebarBtn.addEventListener("click", function () {
         elementToggleFunc(sidebar);
+        const expanded = sidebar.classList.contains("active");
+        sidebarBtn.setAttribute("aria-expanded", expanded);
+        sidebarBtn.setAttribute("aria-label", expanded ? "Hide contacts" : "Show contacts");
     });
 }
 
@@ -27,8 +30,18 @@ const testimonialsModalFunc = function () {
     if (modalContainer && overlay) {
         modalContainer.classList.toggle("active");
         overlay.classList.toggle("active");
+        const open = modalContainer.classList.contains("active");
+        document.body.style.overflow = open ? "hidden" : "";
+        if (open && modalCloseBtn) modalCloseBtn.focus();
     }
 }
+
+// Close the achievement modal with the Escape key
+document.addEventListener("keydown", function (e) {
+    if (e.key === "Escape" && modalContainer && modalContainer.classList.contains("active")) {
+        testimonialsModalFunc();
+    }
+});
 
 if (testimonialsItem.length > 0) {
     for (let i = 0; i < testimonialsItem.length; i++) {
@@ -101,10 +114,12 @@ if (navigationLinks.length > 0 && pages.length > 0) {
                 if (targetPage === pages[j].dataset.page) {
                     pages[j].classList.add("active");
                     navigationLinks[j].classList.add("active");
+                    navigationLinks[j].setAttribute("aria-current", "page");
                     window.scrollTo({ top: 0, behavior: 'smooth' });
                 } else {
                     pages[j].classList.remove("active");
                     navigationLinks[j].classList.remove("active");
+                    navigationLinks[j].removeAttribute("aria-current");
                 }
             }
         });

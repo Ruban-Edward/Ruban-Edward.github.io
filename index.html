@@ -4,10 +4,24 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ruban - Personal Portfolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Ruban Edward | Software Engineer Portfolio</title>
+    <meta name="description"
+        content="Ruban Edward — Software Engineer building scalable web applications, AI and machine learning projects. View projects, resume and contact details.">
+    <meta name="author" content="Ruban Edward">
+    <meta name="theme-color" content="#0d0d0d">
+    <link rel="canonical" href="https://ruban-edward.github.io/">
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://ruban-edward.github.io/">
+    <meta property="og:title" content="Ruban Edward | Software Engineer Portfolio">
+    <meta property="og:description"
+        content="Software Engineer building scalable web applications, AI and machine learning projects.">
+    <meta property="og:image" content="https://ruban-edward.github.io/assets/images/my-avatar.png">
+    <meta name="twitter:card" content="summary">
 
     <link rel="shortcut icon" href="./assets/images/logo.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="./assets/images/my-avatar.png">
 
     <link rel="stylesheet" href="./assets/css/style.css">
 
@@ -38,7 +52,7 @@
                     <p class="title">Software Engineer</p>
                 </div>
 
-                <button class="info_more-btn" data-sidebar-btn>
+                <button class="info_more-btn" data-sidebar-btn aria-label="Show contacts" aria-expanded="false">
                     <span>Show Contacts</span>
                     <ion-icon name="chevron-down"></ion-icon>
                 </button>
@@ -52,7 +66,7 @@
                         <div class="icon-box"><ion-icon name="mail-outline"></ion-icon></div>
                         <div class="contact-info">
                             <p class="contact-title">Email</p>
-                            <a href="mailto:rubanedward769@gmail.com" class="contact-link">rubanedward769@gmail.com</a>
+                            <a href="mailto:rubanedward.re@gmail.com" class="contact-link">rubanedward.re<wbr>@gmail.com</a>
                         </div>
                     </li>
 
@@ -76,7 +90,7 @@
                         <div class="icon-box"><ion-icon name="location-outline"></ion-icon></div>
                         <div class="contact-info">
                             <p class="contact-title">Location</p>
-                            <a href="https://maps.google.com" target="_blank">
+                            <a href="https://maps.google.com/?q=Pondicherry,India" target="_blank" rel="noopener">
                                 <address>Pondicherry, India</address>
                             </a>
                         </div>
@@ -87,18 +101,18 @@
 
                 <ul class="social-list">
                     <li class="social-item">
-                        <a href="https://www.linkedin.com/in/ruban-edward/" class="social-link" target="_blank">
+                        <a href="https://www.linkedin.com/in/ruban-edward/" class="social-link" target="_blank" rel="noopener" aria-label="LinkedIn">
                             <ion-icon name="logo-linkedin"></ion-icon>
                         </a>
                     </li>
                     <li class="social-item">
-                        <a href="https://github.com/Ruban-Edward" class="social-link" target="_blank">
+                        <a href="https://github.com/Ruban-Edward" class="social-link" target="_blank" rel="noopener" aria-label="GitHub">
                             <ion-icon name="logo-github"></ion-icon>
                         </a>
                     </li>
                     <li class="social-item">
                         <a href="https://www.instagram.com/_r.u.b.a.n_e.d.w.a.r.d_29_/" class="social-link"
-                            target="_blank">
+                            target="_blank" rel="noopener" aria-label="Instagram">
                             <ion-icon name="logo-instagram"></ion-icon>
                         </a>
                     </li>
@@ -128,12 +142,14 @@
                         <h3>Hi There! I am a</h3>
                         <h1 class="typing-element"><span class="typing-text"></span><span class="typed-cursor">|</span>
                         </h1>
-                        <p class="hero-subtitle">Engineering innovative, clean, and highly optimized scalable web
-                            solutions.</p>
+                        <p class="hero-subtitle">I build clean, reliable web applications and enjoy turning ideas
+                            into working software.</p>
                         <div class="hero-ctas">
-                            <button class="cta-btn primary-btn"
-                                onclick="document.getElementById('resume-nav-link').click();">View
-                                Resume</button>
+                            <a href="./assets/Ruban_Edward_Resume.pdf" class="cta-btn primary-btn cta-icon-btn"
+                                download="Ruban_Edward_Resume.pdf">
+                                <ion-icon name="download-outline" aria-hidden="true"></ion-icon>
+                                <span>Download Resume</span>
+                            </a>
                             <button class="cta-btn secondary-btn"
                                 onclick="document.getElementById('contact-nav-link').click();">Let's
                                 Talk</button>
@@ -143,16 +159,16 @@
 
                 <section class="about-text">
                     <p>
-                        I am a Software Engineer from Chennai, India, currently working at
-                        <strong>Infiniti Software Solutions</strong>. I hold a Bachelor of Technology degree in
-                        Computer and Communication Engineering from Sri Manakula Vinayagar Engineering College in
-                        Pondicherry, India.
+                        I am a Software Engineer from Pondicherry, India, currently working at
+                        <strong>Infiniti Software Solutions</strong> in Chennai. I hold a Bachelor of Technology
+                        degree in Computer and Communication Engineering from Sri Manakula Vinayagar Engineering
+                        College, Pondicherry.
                     </p>
-                    <h5 class="h5 service-title1">What Powers My Development Strategy</h5>
+                    <h5 class="h5 service-title1">How I Work</h5>
                     <p>
-                        One of the most enjoyable aspects of coding is breaking complex architectural limitations to
-                        arrive at perfectly clean, error-free deployments. My primary goal is to analyze constraints
-                        data-by-data and deliver optimized enterprise solutions.
+                        I enjoy breaking complex problems down into simple, maintainable code. I care about software
+                        that is easy to read, dependable and fast, and I keep learning, from backend frameworks to
+                        AI and computer vision.
                     </p>
                 </section>
 
@@ -182,8 +198,8 @@
                             </div>
                             <div class="service-content-box">
                                 <h4 class="h4 service-item-title">Web Development</h4>
-                                <p class="service-item-text">Building resilient, maintainable, end-to-end fullstack web
-                                    products.</p>
+                                <p class="service-item-text">Building full-stack web applications with PHP, CodeIgniter,
+                                    JavaScript and MySQL.</p>
                             </div>
                         </li>
 
@@ -193,8 +209,8 @@
                             </div>
                             <div class="service-content-box">
                                 <h4 class="h4 service-item-title">AI & Machine Learning</h4>
-                                <p class="service-item-text">Applying algorithmic models and data pipelines to crack
-                                    analytics problems.</p>
+                                <p class="service-item-text">Building computer vision and machine learning projects with
+                                    Python, OpenCV and Scikit-Learn.</p>
                             </div>
                         </li>
                     </ul>
@@ -211,8 +227,7 @@
                                 </figure>
                                 <h4 class="h4 testimonials-item-title" data-testimonials-title>Academic Excellence</h4>
                                 <div class="testimonials-text" data-testimonials-text>
-                                    <p>Graduated with a highly competitive Cumulative Grade Point Average (CGPA) of 8.61
-                                        in Computer and Communication Engineering.</p>
+                                    <p>Graduated with a CGPA of 8.61 in Computer and Communication Engineering.</p>
                                 </div>
                             </div>
                         </li>
@@ -223,35 +238,35 @@
                                     <div class="achievement-icon-wrapper"><ion-icon
                                             name="shield-checkmark-outline"></ion-icon></div>
                                 </figure>
-                                <h4 class="h4 testimonials-item-title" data-testimonials-title>Cloud Credentialed</h4>
+                                <h4 class="h4 testimonials-item-title" data-testimonials-title>Microsoft Azure Certified</h4>
                                 <div class="testimonials-text" data-testimonials-text>
-                                    <p>Successfully completed and secured the industry-recognized Microsoft Azure
-                                        Fundamentals (AZ-900) cloud specification architecture credential.</p>
+                                    <p>Earned the Microsoft Azure Fundamentals (AZ-900) certification, covering core
+                                        cloud concepts and Azure services.</p>
                                 </div>
                             </div>
                         </li>
                     </ul>
                 </section>
 
-                <div class="modal-container" data-modal-container>
-                    <div class="overlay" data-overlay></div>
-                    <section class="testimonials-modal glass-card">
-                        <button class="modal-close-btn" data-modal-close-btn><ion-icon
-                                name="close-outline"></ion-icon></button>
-                        <div class="modal-content">
-                            <h4 class="h3 modal-title" data-modal-title>Achievement Title</h4>
-                            <div data-modal-text>
-                                <p></p>
-                            </div>
-                        </div>
-                    </section>
-                </div>
             </article>
 
             <article class="resume glass-card" data-page="resume">
                 <header>
                     <h2 class="h2 article-title">Resume</h2>
                 </header>
+
+                <div class="resume-actions">
+                    <a href="./assets/Ruban_Edward_Resume.pdf" class="cta-btn primary-btn cta-icon-btn"
+                        download="Ruban_Edward_Resume.pdf">
+                        <ion-icon name="download-outline" aria-hidden="true"></ion-icon>
+                        <span>Download PDF</span>
+                    </a>
+                    <a href="./assets/Ruban_Edward_Resume.pdf" class="cta-btn secondary-btn cta-icon-btn"
+                        target="_blank" rel="noopener">
+                        <ion-icon name="eye-outline" aria-hidden="true"></ion-icon>
+                        <span>View Online</span>
+                    </a>
+                </div>
 
                 <section class="timeline">
                     <div class="title-wrapper">
@@ -280,17 +295,18 @@
                     </div>
                     <ol class="timeline-list">
                         <li class="timeline-item">
-                            <h4 class="h4 timeline-item-title">Infiniti Software Solutions - </h4><span
+                            <h4 class="h4 timeline-item-title">Infiniti Software Solutions</h4><span
                                 class="designation">Software Engineer</span>
                             <span id="presentDuration">Aug 2024 — Present</span>
-                            <p class="timeline-text">Full-time engineering role focused on enterprise application scale
-                                optimization.</p>
+                            <p class="timeline-text">Developing and maintaining enterprise web applications as part of
+                                the product engineering team.</p>
                         </li>
                         <li class="timeline-item">
-                            <h4 class="h4 timeline-item-title">Infiniti Software Solutions - </h4><span
+                            <h4 class="h4 timeline-item-title">Infiniti Software Solutions</h4><span
                                 class="designation">Software Trainee</span>
                             <span>Apr 2024 — Jul 2024 (4 months)</span>
-                            <p class="timeline-text">Apprenticeship and core structural onboarding.</p>
+                            <p class="timeline-text">Completed hands-on training in the company's tech stack and
+                                development practices.</p>
                         </li>
                     </ol>
                 </section>
@@ -306,12 +322,22 @@
                             </div>
                             <div class="carousel-item glass-card">
                                 <div class="carousel-text">
+                                    <p>CodeIgniter</p>
+                                </div>
+                            </div>
+                            <div class="carousel-item glass-card">
+                                <div class="carousel-text">
                                     <p>Java</p>
                                 </div>
                             </div>
                             <div class="carousel-item glass-card">
                                 <div class="carousel-text">
                                     <p>Python</p>
+                                </div>
+                            </div>
+                            <div class="carousel-item glass-card">
+                                <div class="carousel-text">
+                                    <p>JavaScript</p>
                                 </div>
                             </div>
                             <div class="carousel-item glass-card">
@@ -326,27 +352,77 @@
                             </div>
                             <div class="carousel-item glass-card">
                                 <div class="carousel-text">
-                                    <p>JavaScript</p>
-                                </div>
-                            </div>
-                            <div class="carousel-item glass-card">
-                                <div class="carousel-text">
                                     <p>MySQL</p>
                                 </div>
                             </div>
                             <div class="carousel-item glass-card">
                                 <div class="carousel-text">
-                                    <p>PHP</p>
+                                    <p>OpenCV</p>
                                 </div>
                             </div>
                             <div class="carousel-item glass-card">
+                                <div class="carousel-text">
+                                    <p>Docker</p>
+                                </div>
+                            </div>
+                            <div class="carousel-item glass-card">
+                                <div class="carousel-text">
+                                    <p>Git</p>
+                                </div>
+                            </div>
+                            <div class="carousel-item glass-card" aria-hidden="true">
+                                <div class="carousel-text">
+                                    <p>PHP</p>
+                                </div>
+                            </div>
+                            <div class="carousel-item glass-card" aria-hidden="true">
+                                <div class="carousel-text">
+                                    <p>CodeIgniter</p>
+                                </div>
+                            </div>
+                            <div class="carousel-item glass-card" aria-hidden="true">
                                 <div class="carousel-text">
                                     <p>Java</p>
                                 </div>
                             </div>
-                            <div class="carousel-item glass-card">
+                            <div class="carousel-item glass-card" aria-hidden="true">
                                 <div class="carousel-text">
                                     <p>Python</p>
+                                </div>
+                            </div>
+                            <div class="carousel-item glass-card" aria-hidden="true">
+                                <div class="carousel-text">
+                                    <p>JavaScript</p>
+                                </div>
+                            </div>
+                            <div class="carousel-item glass-card" aria-hidden="true">
+                                <div class="carousel-text">
+                                    <p>HTML5</p>
+                                </div>
+                            </div>
+                            <div class="carousel-item glass-card" aria-hidden="true">
+                                <div class="carousel-text">
+                                    <p>CSS3</p>
+                                </div>
+                            </div>
+                            <div class="carousel-item glass-card" aria-hidden="true">
+                                <div class="carousel-text">
+                                    <p>MySQL</p>
+                                </div>
+                            </div>
+                            <div class="carousel-item glass-card" aria-hidden="true">
+                                <div class="carousel-text">
+                                    <p>OpenCV</p>
+                                </div>
+                            </div>
+                            <div class="carousel-item glass-card" aria-hidden="true">
+                                <div class="carousel-text">
+                                    <p>Docker</p>
+                                </div>
+                            </div>
+                            <div class="carousel-item glass-card" aria-hidden="true">
+                                <div class="carousel-text">
+                                    <p>Git</p>
                                 </div>
                             </div>
                         </div>
@@ -394,19 +470,40 @@
                     </ul>
 
                     <ul class="project-list">
-                        <li class="project-item active" data-filter-item data-category="machine learning">
+                        <li class="project-item active" data-filter-item data-category="applications">
                             <div class="project-card-wrapper glass-card">
                                 <div class="project-meta-info">
-                                    <h3 class="project-title">UPI Fraud Detection</h3>
-                                    <p class="project-category">Machine Learning</p>
+                                    <h3 class="project-title">Orvexa</h3>
+                                    <p class="project-category">Applications</p>
+                                    <p class="project-desc">Scrum and software-delivery platform for backlogs, sprints, tasks, teams and reports.</p>
                                     <div class="tech-badges">
-                                        <span class="badge">Python</span>
-                                        <span class="badge">Scikit-Learn</span>
+                                        <span class="badge">PHP</span>
+                                        <span class="badge">CodeIgniter</span>
+                                        <span class="badge">JavaScript</span>
+                                        <span class="badge">Docker</span>
                                     </div>
                                     <div class="project-links">
-                                        <a href="https://github.com/Ruban-Edward/UPI-Fraud-Detection" target="_blank"
-                                            title="View Source Code"><ion-icon name="logo-github"></ion-icon></a>
-                                        <a href="#" title="Live Demo"><ion-icon name="open-outline"></ion-icon></a>
+                                        <a href="https://github.com/Ruban-Edward/orvexa_tool" target="_blank"
+                                            rel="noopener" aria-label="View source on GitHub" title="View Source Code"><ion-icon name="logo-github"></ion-icon></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li class="project-item active" data-filter-item data-category="applications">
+                            <div class="project-card-wrapper glass-card">
+                                <div class="project-meta-info">
+                                    <h3 class="project-title">Chrome New Tab Customization</h3>
+                                    <p class="project-category">Applications</p>
+                                    <p class="project-desc">A minimal, customizable Chrome new tab page with quick access to favourite sites and tools.</p>
+                                    <div class="tech-badges">
+                                        <span class="badge">JavaScript</span>
+                                        <span class="badge">HTML</span>
+                                        <span class="badge">CSS</span>
+                                    </div>
+                                    <div class="project-links">
+                                        <a href="https://github.com/Ruban-Edward/chrome_customization" target="_blank"
+                                            rel="noopener" aria-label="View source on GitHub" title="View Source Code"><ion-icon name="logo-github"></ion-icon></a>
                                     </div>
                                 </div>
                             </div>
@@ -417,14 +514,14 @@
                                 <div class="project-meta-info">
                                     <h3 class="project-title">AI Virtual Mouse</h3>
                                     <p class="project-category">Artificial Intelligence</p>
+                                    <p class="project-desc">Controls the mouse cursor with hand gestures through a real-time camera feed.</p>
                                     <div class="tech-badges">
                                         <span class="badge">Python</span>
                                         <span class="badge">OpenCV</span>
                                     </div>
                                     <div class="project-links">
                                         <a href="https://github.com/Ruban-Edward/AI-Virtual-Mouse" target="_blank"
-                                            title="View Source Code"><ion-icon name="logo-github"></ion-icon></a>
-                                        <a href="#" title="Live Demo"><ion-icon name="open-outline"></ion-icon></a>
+                                            rel="noopener" aria-label="View source on GitHub" title="View Source Code"><ion-icon name="logo-github"></ion-icon></a>
                                     </div>
                                 </div>
                             </div>
@@ -433,16 +530,56 @@
                         <li class="project-item active" data-filter-item data-category="applications">
                             <div class="project-card-wrapper glass-card">
                                 <div class="project-meta-info">
-                                    <h3 class="project-title">Bus Reservation System</h3>
+                                    <h3 class="project-title">Vault Manager</h3>
                                     <p class="project-category">Applications</p>
+                                    <p class="project-desc">Privacy-first mobile app for passwords and private notes, stored only on the device.</p>
                                     <div class="tech-badges">
-                                        <span class="badge">Java</span>
-                                        <span class="badge">MySQL</span>
+                                        <span class="badge">Kotlin</span>
+                                        <span class="badge">JavaScript</span>
+                                        <span class="badge">HTML</span>
                                     </div>
                                     <div class="project-links">
-                                        <a href="#" target="_blank" title="View Source Code"><ion-icon
-                                                name="logo-github"></ion-icon></a>
-                                        <a href="#" title="Live Demo"><ion-icon name="open-outline"></ion-icon></a>
+                                        <a href="https://github.com/Ruban-Edward/Vault-Manager" target="_blank"
+                                            rel="noopener" aria-label="View source on GitHub" title="View Source Code"><ion-icon name="logo-github"></ion-icon></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li class="project-item active" data-filter-item data-category="artificial intelligence">
+                            <div class="project-card-wrapper glass-card">
+                                <div class="project-meta-info">
+                                    <h3 class="project-title">AI Virtual Painter</h3>
+                                    <p class="project-category">Artificial Intelligence</p>
+                                    <p class="project-desc">Paint in the air with your fingers using hand tracking.</p>
+                                    <div class="tech-badges">
+                                        <span class="badge">Python</span>
+                                        <span class="badge">OpenCV</span>
+                                        <span class="badge">MediaPipe</span>
+                                        <span class="badge">NumPy</span>
+                                    </div>
+                                    <div class="project-links">
+                                        <a href="https://github.com/Ruban-Edward/AI-Virtual-Painter" target="_blank"
+                                            rel="noopener" aria-label="View source on GitHub" title="View Source Code"><ion-icon name="logo-github"></ion-icon></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li class="project-item active" data-filter-item data-category="machine learning">
+                            <div class="project-card-wrapper glass-card">
+                                <div class="project-meta-info">
+                                    <h3 class="project-title">Credit Card Fraud Detection</h3>
+                                    <p class="project-category">Machine Learning</p>
+                                    <p class="project-desc">Detects fraudulent transactions using Logistic Regression, Decision Trees and SVM.</p>
+                                    <div class="tech-badges">
+                                        <span class="badge">Python</span>
+                                        <span class="badge">Jupyter</span>
+                                        <span class="badge">Scikit-Learn</span>
+                                    </div>
+                                    <div class="project-links">
+                                        <a href="https://github.com/Ruban-Edward/Credit-Card-Fraud-Detection" target="_blank"
+                                            rel="noopener" aria-label="View source on GitHub" title="View Source Code"><ion-icon name="logo-github"></ion-icon></a>
                                     </div>
                                 </div>
                             </div>
@@ -452,11 +589,10 @@
                     <div class="github-profile-section glass-card">
                         <div class="github-header">
                             <ion-icon name="logo-github"></ion-icon>
-                            <h4>Explore My Code Base Ecosystem</h4>
+                            <h4>More on GitHub</h4>
                         </div>
-                        <p>I constantly commit optimizations and build continuous pipeline deployments directly onto
-                            GitHub.</p>
-                        <a href="https://github.com/Ruban-Edward" target="_blank"
+                        <p>See all my projects, experiments and contributions on my GitHub profile.</p>
+                        <a href="https://github.com/Ruban-Edward" target="_blank" rel="noopener"
                             class="cta-btn primary-btn sync-btn">Visit GitHub Profile</a>
                     </div>
                 </section>
@@ -470,7 +606,7 @@
                 <section class="mapbox">
                     <figure class="mapbox-figure">
                         <iframe src="https://maps.google.com/maps?q=Pondicherry&t=&z=13&ie=UTF8&iwloc=&output=embed"
-                            loading="lazy"></iframe>
+                            loading="lazy" title="Map of Pondicherry, India"></iframe>
                     </figure>
                 </section>
 
@@ -478,13 +614,16 @@
                     <h3 class="h3 form-title">Contact Form</h3>
                     <form action="https://api.web3forms.com/submit" method="POST" class="form" data-form>
                         <input type="hidden" name="access_key" value="43dc81e4-0be2-4b84-829e-a1384a1e070c">
+                        <input type="hidden" name="subject" value="New message from portfolio">
+                        <input type="hidden" name="redirect" value="https://ruban-edward.github.io/views/thankyou.html">
+                        <input type="checkbox" name="botcheck" class="hidden-field" tabindex="-1" autocomplete="off" aria-hidden="true">
                         <div class="input-wrapper">
-                            <input type="text" name="fullname" class="form-input" placeholder="Full name" required
+                            <input type="text" name="fullname" class="form-input" placeholder="Full name" aria-label="Full name" autocomplete="name" required
                                 data-form-input>
-                            <input type="email" name="email" class="form-input" placeholder="Email address" required
+                            <input type="email" name="email" class="form-input" placeholder="Email address" aria-label="Email address" autocomplete="email" required
                                 data-form-input>
                         </div>
-                        <textarea name="message" class="form-input" placeholder="Your Message" required
+                        <textarea name="message" class="form-input" placeholder="Your Message" aria-label="Your message" required
                             data-form-input></textarea>
                         <button class="form-btn" type="submit" disabled data-form-btn>
                             <ion-icon name="paper-plane"></ion-icon>
@@ -500,6 +639,20 @@
 
         </div>
     </main>
+
+    <div class="modal-container" data-modal-container>
+        <div class="overlay" data-overlay></div>
+        <section class="testimonials-modal glass-card" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+            <button class="modal-close-btn" data-modal-close-btn aria-label="Close"><ion-icon
+                    name="close-outline"></ion-icon></button>
+            <div class="modal-content">
+                <h4 class="h3 modal-title" id="modal-title" data-modal-title>Achievement Title</h4>
+                <div data-modal-text>
+                    <p></p>
+                </div>
+            </div>
+        </section>
+    </div>
 
     <script src="./assets/js/script.js"></script>
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>

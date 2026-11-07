@@ -9,27 +9,70 @@
     <!-- Redirect after 5 seconds -->
     <meta http-equiv="refresh" content="3;url=https://ruban-edward.github.io/">
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+
     <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: Arial, sans-serif;
+            font-family: 'Poppins', Arial, sans-serif;
         }
 
         body {
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 100vh;
-            background: #0d0d0d;
+            min-height: 100vh;
+            background:
+                radial-gradient(ellipse 60% 50% at 0% 0%, hsla(45, 100%, 60%, 0.12) 0%, transparent 60%),
+                radial-gradient(ellipse 50% 45% at 100% 100%, hsla(30, 100%, 55%, 0.10) 0%, transparent 60%),
+                #0d0d0d;
             color: #fff;
             text-align: center;
             padding: 20px;
+            overflow: hidden;
+        }
+
+        body::before,
+        body::after {
+            content: "";
+            position: fixed;
+            border-radius: 50%;
+            filter: blur(90px);
+            z-index: -1;
+            pointer-events: none;
+        }
+
+        body::before {
+            width: 380px;
+            height: 380px;
+            top: 15%;
+            left: 15%;
+            background: radial-gradient(circle, hsla(45, 100%, 65%, 0.25) 0%, transparent 70%);
+        }
+
+        body::after {
+            width: 420px;
+            height: 420px;
+            bottom: 10%;
+            right: 15%;
+            background: radial-gradient(circle, hsla(32, 100%, 58%, 0.2) 0%, transparent 70%);
         }
 
         .container {
             max-width: 500px;
+            width: 100%;
+            padding: 40px 30px;
+            background: linear-gradient(135deg, rgba(40, 40, 44, 0.55) 0%, rgba(18, 18, 20, 0.45) 100%);
+            backdrop-filter: blur(22px) saturate(160%);
+            -webkit-backdrop-filter: blur(22px) saturate(160%);
+            border: 1px solid rgba(255, 255, 255, 0.10);
+            border-top-color: rgba(255, 255, 255, 0.18);
+            border-radius: 24px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.45), inset 0 1px 0 rgba(255, 255, 255, 0.08);
         }
 
         .check {
@@ -56,15 +99,19 @@
         a {
             display: inline-block;
             padding: 12px 25px;
-            background: #ffdb70;;
+            background: linear-gradient(135deg, hsla(45, 100%, 72%, 0.95) 0%, hsla(35, 100%, 66%, 0.9) 100%);
+            border: 1px solid hsla(45, 100%, 85%, 0.6);
+            box-shadow: 0 8px 24px rgba(255, 209, 102, 0.25), inset 0 1px 0 rgba(255, 255, 255, 0.45);
             color: #000;
+            font-weight: 500;
             text-decoration: none;
-            border-radius: 8px;
+            border-radius: 12px;
             transition: 0.3s;
         }
 
         a:hover {
-            background: #ffdb70;
+            background: #fff;
+            transform: translateY(-2px);
         }
     </style>
 
