@@ -47,8 +47,8 @@ if (testimonialsItem.length > 0) {
     for (let i = 0; i < testimonialsItem.length; i++) {
         testimonialsItem[i].addEventListener("click", function () {
             if (modalTitle && modalText) {
-                modalTitle.innerHTML = this.querySelector("[data-testimonials-title]").innerHTML;
-                modalText.innerHTML = this.querySelector("[data-testimonials-text]").innerHTML;
+                modalTitle.textContent = this.querySelector("[data-testimonials-title]").textContent;
+                modalText.replaceChildren(...this.querySelector("[data-testimonials-text]").cloneNode(true).childNodes);
                 testimonialsModalFunc();
             }
         });
@@ -124,6 +124,24 @@ if (navigationLinks.length > 0 && pages.length > 0) {
             }
         });
     }
+}
+
+// Hero "Resume" button opens the Resume tab (view/download options live there)
+const gotoResumeBtn = document.querySelector("[data-goto-resume]");
+const resumeNavLink = document.getElementById("resume-nav-link");
+if (gotoResumeBtn && resumeNavLink) {
+    gotoResumeBtn.addEventListener("click", function () {
+        resumeNavLink.click();
+    });
+}
+
+// Hero "Let's Talk" button opens the Contact tab
+const gotoContactBtn = document.querySelector("[data-goto-contact]");
+const contactNavLink = document.getElementById("contact-nav-link");
+if (gotoContactBtn && contactNavLink) {
+    gotoContactBtn.addEventListener("click", function () {
+        contactNavLink.click();
+    });
 }
 
 // Professional Development Experience Continuous Dynamic Calculations Engine
@@ -268,7 +286,7 @@ const runTypingEffect = function () {
         let word = words[i].split("");
         var loopTyping = function () {
             if (word.length > 0) {
-                typingElement.innerHTML += word.shift();
+                typingElement.textContent += word.shift();
             } else {
                 setTimeout(deleting, 2000);
                 return false;
@@ -283,7 +301,7 @@ const runTypingEffect = function () {
         var loopDeleting = function () {
             if (word.length > 0) {
                 word.pop();
-                typingElement.innerHTML = word.join("");
+                typingElement.textContent = word.join("");
             } else {
                 if (words.length > (i + 1)) {
                     i++;

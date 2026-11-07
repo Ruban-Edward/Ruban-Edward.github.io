@@ -74,6 +74,32 @@ li {
     list-style: none;
 }
 
+/* Inline SVG icons (assets/js/icons.js) - same sizing/colouring as the Ionicons component */
+ion-icon {
+    width: 1em;
+    height: 1em;
+    fill: currentColor;
+    box-sizing: content-box;
+}
+
+ion-icon svg {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.ionicon {
+    stroke: currentColor;
+}
+
+.ionicon-fill-none {
+    fill: none;
+}
+
+.ionicon-stroke-width {
+    stroke-width: 32px;
+}
+
 img,
 ion-icon,
 a,
