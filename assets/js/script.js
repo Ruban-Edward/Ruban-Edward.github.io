@@ -162,17 +162,16 @@ function calculateDuration(start, end) {
         endYear = parseInt(eYear);
     }
 
-    let totalMonths = (endYear - startYear) * 12 + (endMonth - startMonth);
+    // Inclusive count: Apr — Jul is 4 months
+    const totalMonths = (endYear - startYear) * 12 + (endMonth - startMonth) + 1;
     const years = Math.floor(totalMonths / 12);
     const remainingMonths = totalMonths % 12;
 
-    let result = `${start} — ${end} `;
-    if (years >= 1) {
-        result += `(${years} yr${years > 1 ? 's' : ''} ${remainingMonths > 0 ? remainingMonths + ' mo' + (remainingMonths > 1 ? 's' : '') : ''})`;
-    } else {
-        result += `(${totalMonths} mos)`;
-    }
-    return result;
+    const parts = [];
+    if (years > 0) parts.push(`${years} yr${years > 1 ? 's' : ''}`);
+    if (remainingMonths > 0) parts.push(`${remainingMonths} mo${remainingMonths > 1 ? 's' : ''}`);
+
+    return `${start} — ${end} (${parts.join(' ')})`;
 }
 
 // High Performance Statistics Auto-Counter Engine Module
@@ -223,7 +222,7 @@ const getExperienceYears = function () {
     };
 
     experienceItems.forEach(item => {
-        const dateSpan = Array.from(item.querySelectorAll('span')).find(span => !span.classList.contains('designation'));
+        const dateSpan = item.querySelector('[data-duration]');
         if (!dateSpan) return;
 
         const rangeText = dateSpan.innerText.trim();
@@ -243,7 +242,7 @@ const getExperienceYears = function () {
 
     if (earliest === null || latest === null) return 0;
 
-    return Math.floor((latest - earliest) / 12);
+    return Math.floor((latest - earliest + 1) / 12);
 };
 
 const updateDynamicStats = function () {
@@ -320,13 +319,10 @@ const runTypingEffect = function () {
 
 // Global DOM Content Synchronization Init Loop Engine
 document.addEventListener('DOMContentLoaded', function () {
-    const presentDurationEl = document.getElementById("presentDuration");
-    if (presentDurationEl) {
-        const engineerText = presentDurationEl.innerText;
-        const [engineerStart, engineerEnd] = engineerText.split(" — ");
-        const engineerResult = calculateDuration(engineerStart.trim(), engineerEnd.trim());
-        presentDurationEl.innerText = engineerResult;
-    }
+    document.querySelectorAll('[data-duration]').forEach(el => {
+        const [start, end] = el.textContent.split('—').map(part => part.trim());
+        if (start && end) el.textContent = calculateDuration(start, end);
+    });
 
     // Initialize Typing Showcase Effect
     runTypingEffect();

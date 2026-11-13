@@ -899,6 +899,30 @@ time {
     line-height: 1.5;
 }
 
+.timeline-bullets {
+    list-style: disc;
+    padding-left: 18px;
+    margin-top: 4px;
+}
+
+.timeline-bullets li {
+    margin-bottom: 6px;
+}
+
+.timeline-bullets li::marker {
+    color: var(--vegas-gold);
+}
+
+.timeline-item .tech-badges {
+    margin: 10px 0 0;
+}
+
+.timeline-list .badge {
+    font-size: 11px;
+    color: var(--light-gray-70);
+    margin: 0;
+}
+
 .designation {
     font-weight: var(--fw-500);
     color: var(--white-2) !important;
