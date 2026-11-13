@@ -55,6 +55,78 @@ if (testimonialsItem.length > 0) {
     }
 }
 
+// Achievements scroll indicator: one dot per scroll position, plus prev/next arrows
+const initAchievementsNav = function () {
+    const list = document.querySelector(".testimonials-list");
+    const nav = document.querySelector("[data-achievements-nav]");
+    const dotsBox = document.querySelector("[data-achievements-dots]");
+    const prevBtn = document.querySelector("[data-achievements-prev]");
+    const nextBtn = document.querySelector("[data-achievements-next]");
+    if (!list || !nav || !dotsBox || !prevBtn || !nextBtn) return;
+
+    const items = list.querySelectorAll(".testimonials-item");
+    let pageCount = 0;
+    let step = 0;
+
+    const currentPage = function () {
+        if (!step) return 0;
+        // At the far right, always mark the last dot
+        if (list.scrollLeft + list.clientWidth >= list.scrollWidth - 2) return pageCount - 1;
+        return Math.min(pageCount - 1, Math.round(list.scrollLeft / step));
+    };
+
+    const goTo = function (page) {
+        list.scrollTo({ left: page * step, behavior: "smooth" });
+    };
+
+    const updateActive = function () {
+        const page = currentPage();
+        dotsBox.querySelectorAll(".achievements-dot").forEach(function (dot, i) {
+            dot.classList.toggle("active", i === page);
+            dot.setAttribute("aria-current", i === page ? "true" : "false");
+        });
+        prevBtn.disabled = page === 0;
+        nextBtn.disabled = page === pageCount - 1;
+    };
+
+    const build = function () {
+        if (!items.length || !list.clientWidth) return; // page is hidden; rebuilt when shown
+        const gap = parseFloat(getComputedStyle(list).columnGap) || 0;
+        step = items[0].offsetWidth + gap;
+        const visible = Math.max(1, Math.round((list.clientWidth + gap) / step));
+        const count = Math.max(1, items.length - visible + 1);
+
+        nav.hidden = count <= 1;
+        if (count !== pageCount) {
+            pageCount = count;
+            dotsBox.replaceChildren();
+            for (let i = 0; i < pageCount; i++) {
+                const dot = document.createElement("button");
+                dot.type = "button";
+                dot.className = "achievements-dot";
+                dot.setAttribute("aria-label", "Show achievement " + (i + 1));
+                dot.addEventListener("click", function () { goTo(i); });
+                dotsBox.appendChild(dot);
+            }
+        }
+        updateActive();
+    };
+
+    prevBtn.addEventListener("click", function () { goTo(Math.max(0, currentPage() - 1)); });
+    nextBtn.addEventListener("click", function () { goTo(Math.min(pageCount - 1, currentPage() + 1)); });
+    list.addEventListener("scroll", updateActive, { passive: true });
+
+    // Also fires when the About page is shown again after being hidden
+    if ("ResizeObserver" in window) {
+        new ResizeObserver(build).observe(list);
+    } else {
+        window.addEventListener("resize", build);
+    }
+    build();
+};
+
+initAchievementsNav();
+
 if (modalCloseBtn) modalCloseBtn.addEventListener("click", testimonialsModalFunc);
 if (overlay) overlay.addEventListener("click", testimonialsModalFunc);
 
@@ -82,6 +154,8 @@ for (let i = 0; i < filterBtn.length; i++) {
         if (lastClickedBtn) lastClickedBtn.classList.remove("active");
         this.classList.add("active");
         lastClickedBtn = this;
+        // On phones the filters scroll sideways: bring a half-hidden button fully into view
+        this.scrollIntoView({ behavior: "smooth", block: "nearest", inline: "nearest" });
     });
 }
 

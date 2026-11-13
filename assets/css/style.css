@@ -743,6 +743,79 @@ time {
     padding: 15px 0 0;
     scroll-snap-type: x mandatory;
     background: transparent;
+    /* Still scrollable (swipe, trackpad, shift+wheel) but the scrollbar is hidden */
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.testimonials-list::-webkit-scrollbar {
+    display: none;
+}
+
+/* Achievements scroll indicator: arrows + dots */
+.achievements-nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+    margin-top: 16px;
+}
+
+.achievements-nav[hidden] {
+    display: none;
+}
+
+.achievements-arrow {
+    display: grid;
+    place-items: center;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: var(--glass-bg-soft);
+    border: 1px solid var(--glass-border);
+    color: var(--light-gray-70);
+    font-size: 16px;
+    transition: var(--transition-1);
+}
+
+.achievements-arrow.prev ion-icon {
+    transform: rotate(90deg);
+}
+
+.achievements-arrow.next ion-icon {
+    transform: rotate(-90deg);
+}
+
+.achievements-arrow:hover:not(:disabled),
+.achievements-arrow:focus-visible {
+    color: var(--orange-yellow-crayola);
+    border-color: rgba(245, 207, 103, 0.35);
+}
+
+.achievements-arrow:disabled {
+    opacity: 0.35;
+    cursor: default;
+}
+
+.achievements-dots {
+    display: flex;
+    gap: 8px;
+}
+
+.achievements-dot {
+    width: 8px;
+    height: 8px;
+    padding: 0;
+    border-radius: 999px;
+    background: var(--light-gray-70);
+    opacity: 0.35;
+    transition: var(--transition-1);
+}
+
+.achievements-dot.active {
+    width: 22px;
+    background: var(--orange-yellow-crayola);
+    opacity: 1;
 }
 
 .testimonials-item {
@@ -906,6 +979,7 @@ time {
 }
 
 .timeline-bullets li {
+    list-style: disc;
     margin-bottom: 6px;
 }
 
@@ -1601,6 +1675,49 @@ address {
         flex-direction: column;
         gap: 6px;
         text-align: center;
+    }
+
+    /* Portfolio filters: one swipeable row (scrollbar hidden) instead of wrapping onto 3 rows */
+    .filter-list {
+        flex-wrap: nowrap;
+        gap: 8px;
+        overflow-x: auto;
+        margin: -6px -6px 19px;
+        padding: 6px 30px 6px 6px; /* room for the active glow; right padding clears the fade */
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+        -webkit-mask-image: linear-gradient(to right, #000 calc(100% - 28px), transparent);
+        mask-image: linear-gradient(to right, #000 calc(100% - 28px), transparent);
+    }
+
+    .filter-list::-webkit-scrollbar {
+        display: none;
+    }
+
+    .filter-item {
+        flex-shrink: 0;
+    }
+
+    .filter-item button {
+        white-space: nowrap;
+    }
+
+    /* Tighter glow so the scrolling row doesn't clip it into a box */
+    .filter-item button.active,
+    .filter-item button:hover {
+        box-shadow: 0 2px 6px rgba(255, 209, 102, 0.25), inset 0 1px 0 rgba(255, 255, 255, 0.45);
+    }
+
+    /* Resume buttons: side by side at equal width instead of wrapping unevenly */
+    .resume-actions {
+        flex-wrap: nowrap;
+        gap: 10px;
+    }
+
+    .resume-actions .cta-btn {
+        flex: 1 1 0;
+        justify-content: center;
+        padding: 10px 12px;
     }
 }
 
